@@ -1,5 +1,6 @@
 import React from 'react'
 import { Switch, Route } from 'react-router-dom'
+import CustomerCreatePage from './pages/CustomerCreatePage';
 import CustomerListPage from './pages/CustomerListPage';
 import LoginPage from './pages/LoginPage'
 
@@ -9,6 +10,9 @@ function App() {
       
 
       <Switch>
+        <Route path="/create-customer">
+          <CustomerCreatePage />
+        </Route>
 
         <Route path="/home">
           <CustomerListPage />
