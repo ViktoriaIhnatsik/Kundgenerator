@@ -46,14 +46,21 @@ export default function LoginPage() {
   }
 
   return (
-    <div>
+    <div className="container">
       <form onSubmit={handleOnSubmit}>
-        <h1 class="h3 mb-3 fw-normal">Please log in</h1>
-        <label>Email</label>
-        <input name="email" value={formData.email} onChange={handleOnChange} /> {/* onChange -> anropa funct*/}
-        <label>Password</label>
-        <input name="password" value={formData.password} onChange={handleOnChange} /> {/*ger name för att ha koll vad är det*/ }
-        <button type="submit"> Login </button>
+        <div className="mb-3 mt-5 ">
+        <h1 className="h3 mb-3 fw-normal text-center">Please log in</h1>
+
+        <label className="form-label">Email adress</label>
+        <input className="form-control" name="email" value={formData.email} onChange={handleOnChange} /> {/* onChange -> anropa funct*/}
+        </div>
+
+        <div className="mb-3">
+        <label className="form-label">Password</label>
+        <input className="form-control" name="password" value={formData.password} onChange={handleOnChange} /> {/*ger name för att ha koll vad är det*/ }
+        </div>
+
+        <button type="submit" className="w-100 btn btn-lg btn-primary"> Login </button>
       </form>
     </div>
   )
