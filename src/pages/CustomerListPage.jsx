@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react'
 import { Link } from 'react-router-dom'
 import CustomerListItem from '../components/CustomerListItem'
+import User from '../components/User'
 
 export default function CustomerListPage() {
 
@@ -24,15 +25,20 @@ export default function CustomerListPage() {
     .then(res => res.json())
     .then(data => setCustomerList(data.results))
   }
+
+  
   return (
     <div>
       <p>Customer List Page</p>
-      
+
+      <User /> {/* hämta info om inloggade användare */}
+
       <Link to="/create-customer">Create Customer</Link>
 
       {customerList.map(item => {   // mapa över 
         return <CustomerListItem key={item.id} customerData={item} />
       })}
+
     </div>
   )
 }
