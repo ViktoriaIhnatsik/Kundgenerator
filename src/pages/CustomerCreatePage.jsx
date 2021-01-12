@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { useHistory }  from 'react-router-dom'
+import User from '../components/User'
 
 export default function CustomerCreatePage() {
 
@@ -47,9 +48,11 @@ export default function CustomerCreatePage() {
     })
   }
 
+
   return (
     <div>
       <p>Customer Create Page</p>
+      <User />
       <form onSubmit={handleOnSubmit}>
         {renderInput("name", "Customer Name")} {/*name, label, type */}
         {renderInput("organisationNr", "Organisation Number")}
