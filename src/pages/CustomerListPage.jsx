@@ -1,4 +1,5 @@
 import React, {useState, useEffect} from 'react'
+import { Link } from 'react-router-dom'
 import CustomerListItem from '../components/CustomerListItem'
 
 export default function CustomerListPage() {
@@ -26,6 +27,9 @@ export default function CustomerListPage() {
   return (
     <div>
       <p>Customer List Page</p>
+      
+      <Link to="/create-customer">Create Customer</Link>
+
       {customerList.map(item => {   // mapa över 
         return <CustomerListItem key={item.id} customerData={item} />
       })}
