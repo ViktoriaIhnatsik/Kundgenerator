@@ -3,6 +3,7 @@ import { Switch, Route } from 'react-router-dom'
 import CustomerCreatePage from './pages/CustomerCreatePage';
 import CustomerDetailPage from './pages/CustomerDetailPage';
 import CustomerListPage from './pages/CustomerListPage';
+import CustomerUpdatePage from './pages/CustomerUpdatePage';
 import LoginPage from './pages/LoginPage'
 
 function App() {
@@ -14,6 +15,8 @@ function App() {
         <Route path="/create-customer">
           <CustomerCreatePage />
         </Route>
+
+        <Route path="/customers/:id/edit" component={CustomerUpdatePage} />
 
         <Route path="/customers/:id" component={CustomerDetailPage} />
          
