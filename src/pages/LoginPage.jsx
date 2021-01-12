@@ -48,11 +48,12 @@ export default function LoginPage() {
   return (
     <div>
       <form onSubmit={handleOnSubmit}>
+        <h1 class="h3 mb-3 fw-normal">Please log in</h1>
         <label>Email</label>
         <input name="email" value={formData.email} onChange={handleOnChange} /> {/* onChange -> anropa funct*/}
         <label>Password</label>
         <input name="password" value={formData.password} onChange={handleOnChange} /> {/*ger name för att ha koll vad är det*/ }
-        <button type="submit"> Log in </button>
+        <button type="submit"> Login </button>
       </form>
     </div>
   )
