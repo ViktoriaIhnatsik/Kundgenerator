@@ -6,4 +6,16 @@ const Body = styled.div`
  max-width: 600px;
  margin: auto;
 `;
-export { Body };
+
+const Footer = styled.footer`
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 60px;
+  background-color: #f2f9ff;
+  text-align: center;
+  padding-top: 15px
+`;
+
+
+export { Body, Footer };

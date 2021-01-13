@@ -52,7 +52,7 @@ export default function LoginPage() {
         <Body>
         <form  className="shadow rounded p-5 m-5 bg-light" onSubmit={handleOnSubmit}>
         
-        <h1 className="h3 mb-5 fw-normal text-center">Please log in</h1>
+        <h1 className="h3 mb-5 text-primary text-center">Please log in</h1>
 
         <label className="form-label">Email adress</label>
         <input className="form-control mb-3" name="email" value={formData.email} onChange={handleOnChange} /> {/* onChange -> anropa funct*/}
@@ -61,7 +61,6 @@ export default function LoginPage() {
         <input className="form-control mb-5" name="password" value={formData.password} onChange={handleOnChange} /> {/*ger name för att ha koll vad är det*/ }
     
         <button type="submit" className="w-100 btn btn-lg btn-primary"> Log in </button>
-        <p className="mt-5 mb-1  text-muted text-center">&copy; 2021</p>
       </form>
       </Body>
 

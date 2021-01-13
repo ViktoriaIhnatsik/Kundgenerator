@@ -1,5 +1,6 @@
 import React from 'react'
 import { Switch, Route } from 'react-router-dom'
+import { Footer } from './components/StyleComponents';
 import CustomerCreatePage from './pages/CustomerCreatePage';
 import CustomerDetailPage from './pages/CustomerDetailPage';
 import CustomerListPage from './pages/CustomerListPage';
@@ -9,10 +10,10 @@ import LoginPage from './pages/LoginPage'
 function App() {
   return (
     <div>
-      
+
       <nav className="navbar navbar-dark bg-secondary bg-gradient">
        <div className="container-fluid">
-        <a className="navbar-brand" href="/">Navbar</a>
+        <a className="navbar-brand" href="/">Customer Generator</a>
        </div>
       </nav>
       
@@ -36,6 +37,10 @@ function App() {
         </Route>
 
       </Switch>
+
+      <Footer>
+      <span class="text-muted">&copy; Copyright 2021</span>
+     </Footer>
 
     </div>
   );
