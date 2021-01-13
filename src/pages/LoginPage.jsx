@@ -1,5 +1,7 @@
 import React, {useState} from 'react'
 import { useHistory } from 'react-router-dom'
+import { Body } from '../components/StyleComponents'
+
 
 export default function LoginPage() {
 
@@ -46,22 +48,23 @@ export default function LoginPage() {
   }
 
   return (
-    <div className="container">
-      <form onSubmit={handleOnSubmit}>
-        <div className="mb-3 mt-5 ">
-        <h1 className="h3 mb-3 fw-normal text-center">Please log in</h1>
+      <div className="container">
+        <Body>
+        <form  className="shadow rounded p-5 m-5 bg-light" onSubmit={handleOnSubmit}>
+        
+        <h1 className="h3 mb-5 fw-normal text-center">Please log in</h1>
 
         <label className="form-label">Email adress</label>
-        <input className="form-control" name="email" value={formData.email} onChange={handleOnChange} /> {/* onChange -> anropa funct*/}
-        </div>
+        <input className="form-control mb-3" name="email" value={formData.email} onChange={handleOnChange} /> {/* onChange -> anropa funct*/}
 
-        <div className="mb-3">
         <label className="form-label">Password</label>
-        <input className="form-control" name="password" value={formData.password} onChange={handleOnChange} /> {/*ger name för att ha koll vad är det*/ }
-        </div>
-
-        <button type="submit" className="w-100 btn btn-lg btn-primary"> Login </button>
+        <input className="form-control mb-5" name="password" value={formData.password} onChange={handleOnChange} /> {/*ger name för att ha koll vad är det*/ }
+    
+        <button type="submit" className="w-100 btn btn-lg btn-primary"> Log in </button>
+        <p className="mt-5 mb-1  text-muted text-center">&copy; 2021</p>
       </form>
-    </div>
+      </Body>
+
+      </div>
   )
 }

@@ -10,7 +10,12 @@ function App() {
   return (
     <div>
       
-
+      <nav className="navbar navbar-dark bg-secondary bg-gradient">
+       <div className="container-fluid">
+        <a className="navbar-brand" href="/">Navbar</a>
+       </div>
+      </nav>
+      
       <Switch>
         <Route path="/create-customer">
           <CustomerCreatePage />
