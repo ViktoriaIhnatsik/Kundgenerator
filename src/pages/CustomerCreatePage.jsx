@@ -18,9 +18,9 @@ export default function CustomerCreatePage() {
     // funktion som tar emot parameter och retunerar input med label
   function renderInput(name, label, type) {
     return (
-    <div>
-     <label>{label}</label>
-      <input 
+    <div className="col-md-6">
+     <label className="form-label">{label}</label>
+      <input className="form-control"
        type={type || "text"} // type om det finns eller || text om det finns inte type
        name={name} 
        onChange={handleOnChange} // updatera formData med vad som skrivas i input 
@@ -50,10 +50,9 @@ export default function CustomerCreatePage() {
 
 
   return (
-    <div>
-      <p>Customer Create Page</p>
+    <div className="container">
       <User />
-      <form onSubmit={handleOnSubmit}>
+      <form className="row g-2" onSubmit={handleOnSubmit}>
         {renderInput("name", "Customer Name")} {/*name, label, type */}
         {renderInput("organisationNr", "Organisation Number")}
         {renderInput("vatNr", "Vat Number")}
@@ -62,7 +61,7 @@ export default function CustomerCreatePage() {
         {renderInput("website", "Website", "url")}
         {renderInput("email", "Customer Email", "email")}
         {renderInput("phoneNumber", "Phone Number", "tel")}
-        <button type="submit">Create Customer</button> {/*submit hela form */}
+        <button  className="btn btn-success mt-5 mx-auto" type="submit">Create Customer</button> {/*submit hela form */}
       </form>
     </div>
   )

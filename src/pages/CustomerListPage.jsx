@@ -28,17 +28,22 @@ export default function CustomerListPage() {
 
   
   return (
-    <div>
-      <p>Customer List Page</p>
+    <div className="container">
 
       <User /> {/* hämta info om inloggade användare */}
 
-      <Link to="/create-customer">Create Customer</Link>
 
       {customerList.map(item => {   // mapa över 
         return <CustomerListItem key={item.id} customerData={item} />
       })}
-
+      
+      
+      
+       <Link  className="btn btn-success btn-block mt-3"  to="/create-customer">
+        Create Customer
+       </Link>  
+      
+       
     </div>
   )
 }

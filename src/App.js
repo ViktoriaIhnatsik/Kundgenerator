@@ -9,9 +9,9 @@ import LoginPage from './pages/LoginPage'
 
 function App() {
   return (
-    <div>
+    <div className="vh-100 bg-light">
 
-      <nav className="navbar navbar-dark bg-secondary bg-gradient">
+      <nav className="navbar navbar-dark bg-primary bg-gradient">
        <div className="container-fluid">
         <a className="navbar-brand" href="/">Customer Generator</a>
        </div>
@@ -39,7 +39,7 @@ function App() {
       </Switch>
 
       <Footer>
-      <span class="text-muted">&copy; Copyright 2021</span>
+      <span className="text-muted">&copy; Copyright 2021</span>
      </Footer>
 
     </div>

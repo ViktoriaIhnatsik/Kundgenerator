@@ -1,4 +1,7 @@
 import React, {useState, useEffect} from 'react'
+import { UserStyle } from '../components/StyleComponents'
+
+
 
 export default function User() {
 
@@ -19,8 +22,9 @@ export default function User() {
   }, [])
 
   return (
-    <div>
-      <p>User: {user.firstName} {user.lastName}</p> {/* hämta info om inloggade användare */}
-    </div>
+       <div className="mt-4 mb-2 d-inline-flex ">
+       <p className=" border rounded border-primary text-primary p-2 "> User: {user.firstName} {user.lastName}</p> {/* hämta info om inloggade användare */}
+      
+      </div>
   )
 }

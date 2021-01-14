@@ -5,6 +5,7 @@ const Body = styled.div`
  width: 100%;
  max-width: 600px;
  margin: auto;
+ padding-top: 50px;
 `;
 
 const Footer = styled.footer`
@@ -12,10 +13,13 @@ const Footer = styled.footer`
   bottom: 0;
   width: 100%;
   height: 60px;
-  background-color: #f2f9ff;
+  background-color: #263238;
   text-align: center;
-  padding-top: 15px
+  padding-top: 15px;
+  color: #FFFFFF;
 `;
 
 
-export { Body, Footer };
+
+
+export { Body, Footer};
