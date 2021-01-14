@@ -11,7 +11,7 @@ function App() {
   return (
     <div className="vh-100 bg-light">
 
-      <nav className="navbar navbar-dark bg-primary bg-gradient">
+      <nav className="navbar navbar-dark bg-dark bg-gradient">
        <div className="container-fluid">
         <a className="navbar-brand" href="/">Customer Generator</a>
        </div>

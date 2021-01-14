@@ -8,12 +8,14 @@ const Body = styled.div`
  padding-top: 50px;
 `;
 
+
+
 const Footer = styled.footer`
   position: absolute;
   bottom: 0;
   width: 100%;
   height: 60px;
-  background-color: #263238;
+  background-color: #B0BEC5;
   text-align: center;
   padding-top: 15px;
   color: #FFFFFF;

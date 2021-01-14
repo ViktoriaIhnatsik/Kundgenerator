@@ -1,5 +1,7 @@
 import React, {useState, useEffect} from 'react'
 import { useHistory, Link } from 'react-router-dom'
+import User from '../components/User'
+
 
 
 export default function CustomerDetailPage(props) {
@@ -45,13 +47,13 @@ useEffect (() => {
 
 
   return (
-    <div>
-     <p>Customer Detail Page</p>
+    <div className="container">
+      <User/>
 
      {customerItem // kolla om customerItem finns 
      ? (
-        <div>
-          <h1>{customerItem.name}</h1>
+        <div className="shadow rounded  p-5 m-2 bg-light">
+          <h1 className="text-primary ">{customerItem.name}</h1>
            
            <table>
             <tbody>
@@ -102,17 +104,22 @@ useEffect (() => {
              </tbody>      
           </table>
 
-          <button onClick={deleteCustomer}>Delete Customer</button>
+          <button className="btn btn-danger mt-4 mr-3 " onClick={deleteCustomer}>Delete Customer</button>
 
-           <Link to={`/customers/${customerId}/edit`}>Edit Customer</Link>
+           <Link className="btn btn-success  mt-4"  to={`/customers/${customerId}/edit`}>Edit Customer</Link>
 
           </div>
+      
       )
       :
       (
          <span>Laddar data...</span> // om det finns inte 
       )
     }    
+
+        <Link  className="btn btn-outline-secondary mt-4"  to="/home">
+         Back to Customers
+       </Link>  
     </div>
   )
 }

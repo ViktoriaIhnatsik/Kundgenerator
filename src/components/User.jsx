@@ -22,7 +22,7 @@ export default function User() {
   }, [])
 
   return (
-       <div className="mt-4 mb-2 d-inline-flex ">
+       <div className="mt-4 mb-3 d-flex justify-content-end">
        <p className=" border rounded border-primary text-primary p-2 "> User: {user.firstName} {user.lastName}</p> {/* hämta info om inloggade användare */}
       
       </div>

@@ -52,6 +52,7 @@ export default function CustomerCreatePage() {
   return (
     <div className="container">
       <User />
+      
       <form className="row g-2" onSubmit={handleOnSubmit}>
         {renderInput("name", "Customer Name")} {/*name, label, type */}
         {renderInput("organisationNr", "Organisation Number")}
