@@ -1,5 +1,6 @@
 import React, { useState, useEffect} from 'react'
 import { useHistory } from 'react-router-dom'
+import User from '../components/User'
 
 export default function CustomerUpdatePage(props) {
   const customerId = props.match.params.id // id ligger här -> console.log(props)
@@ -32,9 +33,9 @@ export default function CustomerUpdatePage(props) {
 
    function renderInput(name, label, type) {
     return (
-    <div>
-     <label>{label}</label>
-      <input 
+    <div className="col-md-6">
+     <label className="form-label">{label}</label>
+      <input className="form-control"
        type={type || "text"} 
        name={name} 
        value={formData[name] || ""}  // kollar om vi hinner göra fetch så sätter formData, om inte retunerar tom sträng
@@ -61,9 +62,10 @@ export default function CustomerUpdatePage(props) {
 
   }
   return (
-    <div>
-     <p>Update Customer</p> 
-     <form onSubmit={handleOnSubmit}>
+    <div className="container">
+    <User />
+   
+     <form  className="row g-2" onSubmit={handleOnSubmit}>
         {renderInput("name", "Customer Name")}
         {renderInput("email", "Customer Email")}
         {renderInput("organisationNr", "Organisation Number")}
@@ -72,7 +74,7 @@ export default function CustomerUpdatePage(props) {
         {renderInput("reference", "Reference")}
         {renderInput("vatNr", "Vat Number")}
         {renderInput("website", "Website", "url")}
-        <button type="submit">Update Customer</button>
+        <button className="btn btn-success mt-5 mx-auto" type="submit">Update Customer</button>
       </form>
     </div>
   )
