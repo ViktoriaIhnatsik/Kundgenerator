@@ -31,11 +31,28 @@ export default function CustomerListPage() {
     <div className="container">
 
       <User /> {/* hämta info om inloggade användare */}
+     
 
+      <table className="table table-striped table-hover ">
 
+        <thead>
+         <tr>
+          <th >Name</th>
+          <th >Email</th>
+          <th >Phone Number</th>
+          <th>Detail Info</th>
+         </tr>
+        </thead>
+
+        <tbody>
+               
       {customerList.map(item => {   // mapa över 
         return <CustomerListItem key={item.id} customerData={item} />
       })}
+         
+      </tbody>
+      </table>
+      
       
       
       

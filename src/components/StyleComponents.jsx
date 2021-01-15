@@ -8,6 +8,10 @@ const Body = styled.div`
  padding-top: 50px;
 `;
 
+const BodyDetail = styled(Body)` 
+padding-top: 5px;
+text-align: center;
+`
 
 
 const Footer = styled.footer`
@@ -24,4 +28,4 @@ const Footer = styled.footer`
 
 
 
-export { Body, Footer};
+export { Body, Footer, BodyDetail };

@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react'
 import { useHistory, Link } from 'react-router-dom'
+import { BodyDetail } from '../components/StyleComponents'
 import User from '../components/User'
 
 
@@ -52,10 +53,10 @@ useEffect (() => {
 
      {customerItem // kolla om customerItem finns 
      ? (
-        <div className="shadow rounded  p-5 m-2 bg-light">
+        <BodyDetail>
           <h1 className="text-primary ">{customerItem.name}</h1>
            
-           <table>
+           <table className="table table-striped table-bordered  ">
             <tbody>
 
             <tr>
@@ -104,11 +105,11 @@ useEffect (() => {
              </tbody>      
           </table>
 
-          <button className="btn btn-danger mt-4 mr-3 " onClick={deleteCustomer}>Delete Customer</button>
+          <button className="btn btn-danger mt-2 mr-3 " onClick={deleteCustomer}>Delete Customer</button>
 
-           <Link className="btn btn-success  mt-4"  to={`/customers/${customerId}/edit`}>Edit Customer</Link>
+           <Link className="btn btn-success  mt-2"  to={`/customers/${customerId}/edit`}>Edit Customer</Link>
 
-          </div>
+          </BodyDetail>
       
       )
       :
