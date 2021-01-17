@@ -3,12 +3,12 @@ import { useHistory } from 'react-router-dom'
 import User from '../components/User'
 
 export default function CustomerUpdatePage(props) {
-  const customerId = props.match.params.id // id ligger här -> console.log(props)
+  const customerId = props.match.params.id 
   const [formData, setFormData] = useState({})
   const history = useHistory()
 
   function getCustomerItem() {
-   const url = `https://frebi.willandskill.eu/api/v1/customers/${customerId}/` //för att få info för en customer
+   const url = `https://frebi.willandskill.eu/api/v1/customers/${customerId}/` //få info för en customer
     const token = localStorage.getItem("WEBB20")
     fetch(url, {
       headers: {
@@ -25,9 +25,9 @@ export default function CustomerUpdatePage(props) {
  }, [])
 
  function handleOnChange(e) {
-   const name = e.target.name  //kollar namn 
-   const value = e.target.value  //kolar input vad man skriv
-   const newObj = {...formData, [name]: value} //uppdatera varje gång med ny info
+   const name = e.target.name  
+   const value = e.target.value  
+   const newObj = {...formData, [name]: value} 
    setFormData(newObj)
  }
 
@@ -50,7 +50,7 @@ export default function CustomerUpdatePage(props) {
     const url = `https://frebi.willandskill.eu/api/v1/customers/${customerId}/` 
     const token = localStorage.getItem("WEBB20")
     fetch(url, {
-      method: "PUT", // När man vill förändra hela objektet
+      method: "PUT", // när man vill förändra hela objektet
       body: JSON.stringify(formData),
       headers: {
         "Content-Type": "application/json",

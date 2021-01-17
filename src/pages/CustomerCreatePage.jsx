@@ -4,18 +4,18 @@ import User from '../components/User'
 
 export default function CustomerCreatePage() {
 
-  const [formData, setFormData] = useState({})  // spara form data i variabel
-   const history = useHistory()  // användarens historik
+  const [formData, setFormData] = useState({})  
+   const history = useHistory()  
 
 
    function handleOnChange(e) {
-   const name = e.target.name  //kollar namn 
-   const value = e.target.value  //kolar input vad man skrev
+   const name = e.target.name  
+   const value = e.target.value  
    const newObj = {...formData, [name]: value} //uppdatera varje gång med ny info
    setFormData(newObj)
  }
 
-    // funktion som tar emot parameter och retunerar input med label
+   // funktion som tar emot parameter och retunerar input med label
   function renderInput(name, label, type) {
     return (
     <div className="col-md-6">
@@ -34,17 +34,17 @@ export default function CustomerCreatePage() {
     const url = "https://frebi.willandskill.eu/api/v1/customers/"
     const token = localStorage.getItem("WEBB20")
     fetch(url, {
-      method: "POST", // När man vill skapa något / Sckicka data
+      method: "POST", // när man vill skapa något / sckicka data
       body: JSON.stringify(formData),
-       headers: {    //metaData; saker som är unik i den här anropet
+       headers: {    
         "Content-Type": "application/json",
         "Authorization": `Bearer ${token}`
       }
     })
     .then( res => res.json())
     .then( data => {
-      console.log(data)
-       history.push("/home") //när new customer skappas, ska vi navigera honom till home page
+       console.log(data)
+       history.push("/home") //när new customer skappas,  navigera honom till home page
     })
   }
 

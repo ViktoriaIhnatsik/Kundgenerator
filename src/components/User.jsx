@@ -1,8 +1,6 @@
 import React, {useState, useEffect} from 'react'
 
 
-
-
 export default function User() {
 
   const [user, setUser] = useState({})
@@ -21,10 +19,11 @@ export default function User() {
     .then(data => setUser(data))
   }, [])
 
-  return (
-       <div className="mt-4 mb-3 d-flex justify-content-end">
-       <p className=" border rounded border-primary text-primary p-2 "> User: {user.firstName} {user.lastName}</p> {/* hämta info om inloggade användare */}
-      
+  return (   //hämta info om inloggade användare 
+      <div className="mt-4 mb-3 d-flex justify-content-end">
+       <p className="border rounded border-primary text-primary p-2  "> 
+       User: {user.firstName} {user.lastName}
+       </p> 
       </div>
   )
 }

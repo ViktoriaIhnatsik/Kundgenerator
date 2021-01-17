@@ -8,7 +8,7 @@ import User from '../components/User'
 export default function CustomerDetailPage(props) {
 //console.log(props)
 const customerId = props.match.params.id
-const [customerItem, setCustomerItem] = useState(null)  // vi fått objekt från api i console; null för att kolla om det finns customerItem i return 
+const [customerItem, setCustomerItem] = useState(null)  
 const history = useHistory()
 
 
@@ -82,7 +82,7 @@ useEffect (() => {
              <tr>
               <td>Website</td>
               <td>
-                <a href={customerItem.website} target="_blank"> {/* target -> oppna ny fönster*/}
+                <a href={customerItem.website} target="_blank"> 
                   {customerItem.website}
                 </a>
               </td>
@@ -91,7 +91,7 @@ useEffect (() => {
              <tr>
               <td>Email</td>
               <td>
-                <a href={`mailto:${customerItem.email}`}> {/* a taget använder utanför react, vi vill standard webläser beteende*/}
+                <a href={`mailto:${customerItem.email}`}> 
                   {customerItem.email}
                 </a>
               </td>

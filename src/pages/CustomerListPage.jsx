@@ -5,7 +5,7 @@ import User from '../components/User'
 
 export default function CustomerListPage() {
 
-  const [customerList, setCustomerList] = useState([]) // variabel för funkt getCustomerList; [] -> resultatet kommer från array, darför skriver vi []
+  const [customerList, setCustomerList] = useState([]) // [] -> resultatet kommer från array
 
   useEffect ( () => {
     getCustomerList()  // när sida randeras få customer list
@@ -15,7 +15,7 @@ export default function CustomerListPage() {
   // hämta list med alla kundar
   function getCustomerList() {
     const url = "https://frebi.willandskill.eu/api/v1/customers/"
-    const token = localStorage.getItem("WEBB20") // använda token som fi vick från respons
+    const token = localStorage.getItem("WEBB20") //  token  från respons
      fetch(url, {
       headers: {
         "Content-Type": "application/json",
@@ -44,23 +44,18 @@ export default function CustomerListPage() {
          </tr>
         </thead>
 
-        <tbody>
-               
-      {customerList.map(item => {   // mapa över 
+        <tbody>         
+      {customerList.map(item => {   
         return <CustomerListItem key={item.id} customerData={item} />
-      })}
-         
+      })}  
       </tbody>
+
       </table>
-      
-      
-      
       
        <Link  className="btn btn-success btn-block mt-3"  to="/create-customer">
         Create Customer
        </Link>  
       
-       
     </div>
   )
 }

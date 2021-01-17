@@ -4,11 +4,9 @@ import { Link } from 'react-router-dom'
 export default function CustomerListItem({customerData}) {
   return (
       <tr>
-         {/*link till en customer detail page */} 
+         
 
-        <td>
-          {customerData.name} 
-        </td> 
+        <td>{customerData.name} </td> 
 
        <td>{customerData.email}</td> 
 
