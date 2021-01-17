@@ -1,3 +1,5 @@
+Kungneratoe
+
 Individiuellinlämningsuppgift 
 
 Uppgiften går ut på att skapa ett projekt för småföretag, så att de kan hålla reda på sina kunder samt lite information om varje kund.
@@ -13,8 +15,7 @@ Styled Components
 Skapa styled components
 VG Ärv CSS-properties en styled-component
 
-API
-https://frebi.willandskill.eu/
+
 
 Logga in användaren
 Här visar vi upp input fält för email och användare samt en knapp för att logga in. När användaren trycker på knappen så skickar vi ett anrop till /api-tokenauth/ med email och password. Då får vi tillbaka en token
