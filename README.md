@@ -1,3 +1,5 @@
+Kundgenerator
+
 Individiuellinlämningsuppgift 
 
 Uppgiften går ut på att skapa ett projekt för småföretag, så att de kan hålla reda på sina kunder samt lite information om varje kund.
