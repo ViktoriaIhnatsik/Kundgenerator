@@ -1,7 +1,5 @@
 Kungneratoe
 
-Individiuellinlämningsuppgift 
-
 Uppgiften går ut på att skapa ett projekt för småföretag, så att de kan hålla reda på sina kunder samt lite information om varje kund.
 
 Krav:
@@ -14,7 +12,6 @@ VG useContext (spara kundlistan och inloggade användarens information i Context
 Styled Components
 Skapa styled components
 VG Ärv CSS-properties en styled-component
-
 
 
 Logga in användaren
