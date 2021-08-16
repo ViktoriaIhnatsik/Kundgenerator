@@ -1,17 +1,20 @@
-Kungneratoe
+# Kungnerator
+
+ **JavaScript-bibliotek och ramverk kurs(React)**
+ 
+>Uppgift:
+
+Individuell inlämningsuppgift 
 
 Uppgiften går ut på att skapa ett projekt för småföretag, så att de kan hålla reda på sina kunder samt lite information om varje kund.
 
 Krav:
-React
-JSX
-React Router Dom
-useState
-useEffect
-VG useContext (spara kundlistan och inloggade användarens information i Context)
-Styled Components
-Skapa styled components
-VG Ärv CSS-properties en styled-component
+- React
+- JSX
+- React Router Dom
+- useState
+- useEffect
+- Styled Components
 
 
 Logga in användaren
@@ -29,5 +32,5 @@ När användaren har logga in navigerar vi vidare till /home
 Detaljvy för en specifik kund
 - Visa följande information på Detaljvy för en specifik kund  (name, orgaNr, vatNr, ....)
 - Lägg till en knapp så att användaren kan ta bort en kund (HTTP Method Delete på /api/v1/customers/{id}/ ). Användaren ska därefter navigera tillbaka till "Hemskärmen"
-- VG Ge användaren möjlighet att ändra kundens information (PUT/PATCH)
+
 
