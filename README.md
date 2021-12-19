@@ -1,4 +1,4 @@
-# Kundgnerator
+# Kundgenerator
 :link: [Kundgenerator](https://kungnerator.herokuapp.com/)
 
  **JavaScript-bibliotek och ramverk kurs(React)**
